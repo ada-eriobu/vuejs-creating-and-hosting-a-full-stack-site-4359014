@@ -1,17 +1,18 @@
 <template>
-  <NavBar />
-  <div class="page-wrap">
-      <router-view></router-view>
-  </div>
+<NavBar/>
+<div class="page-wrap">
+  <router-view></router-view>
+
+</div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue'
-
 export default {
-  name: "App",
+  name: 'App',
   components: {
     NavBar,
   },
-};
+}
 </script>
+

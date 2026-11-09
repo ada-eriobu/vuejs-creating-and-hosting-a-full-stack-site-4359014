@@ -1,18 +1,11 @@
 <template>
   <h1>Shopping Cart</h1>
-  <div v-if="cartItems.length > 0">
-    <ShoppingCartList :products="cartItems" />
-    <button class="checkout-button">Proceed to Checkout</button>
-  </div>
-  <div v-if="cartItems.length === 0">
-    You current have no items in your cart!
-  </div>
+  <ShoppingCartList :cartItems="cartItems" />
 </template>
 
 <script>
-import ShoppingCartList from '@/components/ShoppingCartList.vue';
-import { cartItems } from '../temp-data';
-
+import { cartItems } from "../temp-data";
+import ShoppingCartList from "../components/ShoppingCartList.vue";
 export default {
   name: "ShoppingCartPage",
   components: {
@@ -21,7 +14,7 @@ export default {
   data() {
     return {
       cartItems,
-    }
-  }
-}
+    };
+  },
+};
 </script>
